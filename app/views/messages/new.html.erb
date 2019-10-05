@@ -1,12 +1,10 @@
-<%= form_with model: @message do |form| %>
-  <div class="row">
-      <div class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <%= form.text_field :text, placeholder: "メッセージを書いてみよう" %>
-          </div>
-        </div>
-        <%= form.submit class: "btn waves-effect waves-light", value: "SEND"%>
-      </div>
-    </div>
-  <% end %>
+<div class="contents">
+  <h2>投稿する</h2>
+  <div class="input_box">
+    <%= form_with(url: "/messages", local: true) do |form| %>
+      <%= form.text_field :text, class: "message_form" %>
+      <%= form.submit class: "submit-button" %>
+    <% end %>
+  </div>
+</div>
+
