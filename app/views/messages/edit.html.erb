@@ -1,0 +1,9 @@
+<div class="contents">
+  <h2>編集する</h2>
+  <div class="input_box">
+    <%= form_with(url: "/messages/#{@message.id}", local: true, method: :patch ) do |form| %>
+      <%= form.text_field :text, class: "message_form", value: "#{@message.text}" %>
+      <%= form.submit class: "submit-button" %>
+    <% end %>
+  </div>
+</div>

@@ -1,9 +1,6 @@
 <div class="contents">
   <% @messages.each do |message| %>
-    <article class="message clearfix">
-      <div class="message_box">
-        <p class="text"><%= message.text %></p>
-      </div>
-    </article>
+    <%= render partial: "message", locals: {message: message} %>
   <% end %>
+  <%= paginate(@messages) %>
 </div>

@@ -9,11 +9,19 @@
   </head>
 
   <body>
-    <header>
-      <h1>MINI APP</h1>
-      <ul class="menu_nav">
-        <li><%= link_to "投稿", messages_new_path %></li>
-      </ul>
+    <header class="header">
+      <h1 class="header_title">MINI APP</h1>
+      <% if user_signed_in? %>
+        <ul class="menu">
+          <li class="menu_nav"><%= link_to "投稿", messages_new_path %></li>
+          <li class="menu_nav"><%= link_to "退出", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      <% else %>
+        <ul class="menu">
+          <li class="menu_nav"><%= link_to "入室", new_user_session_path %></li>
+          <li class="menu_nav"><%= link_to "登録", new_user_registration_path  %></li>
+        </ul>
+      <% end %>
     </header>
     <%= yield %>
   </body>

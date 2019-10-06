@@ -1,0 +1,13 @@
+<article class="message clearfix">
+      <div class="message_box">
+        <p class="text"><%= message.text %></p>
+      </div>
+      <% if user_signed_in? && current_user.id == message.user_id %>
+        <div class="message_action">
+          <ul>
+           <li><%= link_to '削除', "/messages/#{message.id}", method: :delete %></li>
+           <li><%= link_to '編集', "/messages/#{message.id}/edit", method: :get %></li>
+          </ul>
+        </div>
+      <% end %>
+    </article>
