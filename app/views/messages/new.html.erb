@@ -1,10 +1,12 @@
 <div class="contents">
-  <h2>投稿する</h2>
-  <div class="input_box">
-    <%= form_with(url: "/messages", local: true) do |form| %>
-      <%= form.text_field :text, class: "message_form" %>
-      <%= form.submit class: "submit-button" %>
-    <% end %>
+  <div class="message_box">
+    <h2>投稿する</h2>
+    <div class="input_box">
+      <%= form_with(url: "/messages", local: true, class: "form") do |form| %>
+        <%= form.text_field :text, class: "message_form" %>
+        <%= form.submit class: "submit-button", value: "投稿" %>
+      <% end %>
+    </div>
   </div>
 </div>
 

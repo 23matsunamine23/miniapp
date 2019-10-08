@@ -1,20 +1,13 @@
 body, html {
   height: 100%;
-  background-color: #ddd;
 }
 
 h1, h2, h3, h4, h5, h6, p, body {
   font-size: 14px;
-  color: #4a4a4a;
+  color: #fff;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-}
-
-.clearfix:after{
-  display: block;
-  content: "";
-  clear: both;
 }
 
 .wrapper{
@@ -22,23 +15,25 @@ h1, h2, h3, h4, h5, h6, p, body {
   }
 
 header{
-  height: 46px;
-  background-color: white;
-  /*border-bottom: 2px solid #bbb;*/
+  height: 60px;
+  background-color: rgb(23, 218, 39);
 }
 
 .header{
+  width: 100vw;
   display: flex;
   justify-content: center;
   position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .menu{
   display: flex;
-  width: 15vw;
   position: absolute;
-  top: -10px;
-  left: 82%;
+  top: -14px;
+  left: 75%;
 }
 
 .menu_nav{
@@ -48,16 +43,13 @@ header{
 .menu_nav a{
   text-decoration: none;
   display: block;
-  padding: 10px 30px;
-  color: #000;
- 
-  font-weight: bold;
+  padding: 17px 30px;
+  color: rgb(248, 245, 245);
 }
 
 h1{
-  height: 46px;
-  line-height: 46px;
-  font-size: 18px;
+  line-height: 60px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -73,35 +65,39 @@ h2{
   width: 600px;
   margin: 5px auto 0;
   background-color: white;
+  padding-top: 60px;
 }
 
-form{
-  width: 600px;
-  background-color: white;
-  padding: 5px 0 0;
+.message_box{
+  margin-top: 40px;
 }
 
-.input-box{
-  float: left;
-  width: 500px;
+.contents h2{
+  color: #000;
+  font-size: 20px;
 }
 
-.input-box input{
-  width: 100%;
-  margin: 0 0 10px 0;
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: rgb(226, 226, 223);
 }
 
-form img{
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  float: left;
-  height: 24px;
-  margin: 0 5px 5px 34px;
+.form{
+  background-color: #fff;
+}
+
+.message_form{
+  width: 30%;
+  display: block;
 }
 
 .submit-button{
-  width: 70px;
-  margin: 10px 25px 0 0;
+  background-color: rgb(53, 187, 197);
+  font-size: 17px;
+  display: block;
+  margin-left: 8px;
 }
 
 form textarea{
@@ -109,44 +105,82 @@ form textarea{
   border: 1px solid #ccc;
 }
 
-.button-box{
-  float: right;
-  height: 70px;
-}
-
 .message{
-  min-height: 100px;
+  min-height: 90px;
   width: 598px;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid #bbb;
-  border-bottom: none;
-}
-
-.message img{
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  float: left;
-  height: 48px;
-  margin: 10px;
+  border: 2px solid #bbb;
 }
 
 .message_box{
-  /* float: left; */
   height: 100px;
   width: 505px;
-  padding: 9px 0 10px;
-}
-
-.user_name{
-  font-weight: bold;
-  line-height: 18px;
-}
-
-.time{
-  color: #bbb;
+  padding: 9px 38px 10px;
+  text-align: center;
 }
 
 .text{
-  line-height: 18px;
+  line-height: 41px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #000;
+}
+
+.pagination a{
+  text-decoration: none;
+  color: rgb(12, 207, 45);
+}
+
+.login_title{
+  padding-top: 50px;
+}
+
+.new_user{
+  height: 100vh;
+  width: 100vw;
+  padding-top: 50px;
+  position: relative;
+}
+
+#user_email{
+  display: block;
+  border: 2px solid rgb(102, 212, 80);
+}
+
+#user_password{
+  display: block;
+  border: 2px solid rgb(102, 212, 80);
+}
+
+#user_password_confirmation{
+  display: block;
+  border: 2px solid rgb(102, 212, 80);
+}
+
+#user_remember_me{
+  display: none;
+}
+
+.login_btn{
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 900px;
+  width: 75px;
+  cursor: pointer;
+}
+
+.field{
+  height: 0;
+  margin-left: 15px;
+}
+
+.sign_up{
+  display: block;
+  position: absolute;
+  top: 73px;
+  left: 1020px;
+  width: 75px;
+  cursor: pointer;
 }
